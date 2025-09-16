@@ -63,6 +63,7 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         value={selectedOptions}
         onChange={handleMultiChange}
         options={options}
+        placeholder="Selecione as categorias"
         isMulti
         isClearable
         isSearchable

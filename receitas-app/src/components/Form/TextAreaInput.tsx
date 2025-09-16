@@ -4,7 +4,7 @@ import AlertDialog from "../Modals/AlertDialog/AlertDialog";
 import { FaInfoCircle } from "react-icons/fa";
 
 interface TextAreaInputProps {
-  label: string;
+  label?: string;
   value: string;
   onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   name: string;
@@ -18,7 +18,7 @@ interface TextAreaInputProps {
 }
 
 const TextAreaInput = forwardRef<HTMLTextAreaElement, TextAreaInputProps>(({
-  label,
+  label="",
   value,
   onChange,
   name,

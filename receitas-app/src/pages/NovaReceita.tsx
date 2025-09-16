@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { InputField, TextAreaInput, MultiSelect, SubmitButton, FileInput } from "../components/Form";
-import Ingredientes from "../components/Ingredientes/Ingredientes";
+import Ingredientes from "../components/NovaReceitaComponents/Ingredientes/Ingredientes";
+import Preparo from "../components/NovaReceitaComponents/Preparo/Preparo";
 
 function NovaReceita() {
   const [formData, setFormData] = useState({
@@ -68,6 +69,11 @@ function NovaReceita() {
         <Ingredientes
           ingredientes={formData.ingredientes}
           setIngredientes={(ingredientes) => setFormData({ ...formData, ingredientes })}
+        />
+
+        <Preparo
+          etapas={formData.preparo}
+          setEtapas={(preparo) => setFormData({ ...formData, preparo })}
         />
 
         <FileInput
